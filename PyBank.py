@@ -82,12 +82,3 @@ Lines = [
 ]
 
 output.writelines(Lines)
-
-
-#line1 = "Financial Analysis \n"
-#line2 = "---------------------------- n\" ,
-#line3 = str(f"Total Months: {str(total_months)}")
-#line4 = str(f"Total: ${str(total_pl)}")
-#line5 = str(f"Average Change: ${str(round(avg_change,2))}")
-#line6 = str(f"Greatest Increase in Profits: {greatest_date} (${str(greatest_increase)})")
-#line7 = str(f"Greatest Decrease in Profits: {lowest_date} (${str(greatest_decrease)})")
