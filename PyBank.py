@@ -34,7 +34,25 @@ with open(budget_data, newline = "") as csvfile:
        #keep track of dates
        dates.append(row[0]) 
 
-       #calculate the change 3
+       #calculate the change, add it to list of changes 
        change = int(row[1])-value
        profits.append(change)
+       value = int(row[1])
+
+       #Total number of month
+       total_months += 1
        
+       #total net amount of profit/losses over time
+       total_pl  = total_pl + int(row[1])
+        
+    #greatest increase in profits
+    greatest_increase = max(profits)
+    greatest_index = profits.index(greatest_increase)
+    greatest_date = dates[greatest_index]
+    
+    #greatest decrease in profits
+    greatest_decrease = min(profits)
+    lowest_index = profits.index(greatest_decrease)
+    lowest_date = dates[lowest_index]
+    
+
