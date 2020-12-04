@@ -54,5 +54,40 @@ with open(budget_data, newline = "") as csvfile:
     greatest_decrease = min(profits)
     lowest_index = profits.index(greatest_decrease)
     lowest_date = dates[lowest_index]
-    
 
+    #average change in profit/loss
+    avg_change = sum(profits)/len(profits)
+    print(avg_change)
+
+#display outputs
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {str(total_months)}")
+print(f"Total: ${str(total_pl)}")
+print(f"Average Change : ${str(round(avg_change,2))}")
+print(f"Greatest Increase in Profits: {greatest_date} (${str(greatest_increase)})")
+print(f"Greatest Decrease in Profits: {lowest_date} (${str(greatest_decrease)})")
+
+#out put to text file
+output = open("PyBank_output.txt", "w")  
+
+Lines = [
+    "Financial Analysis \n",
+    "---------------------------- \n",
+    str(f"Total Months: {str(total_months)} \n"),
+    str(f"Total: ${str(total_pl)} \n"),
+    str(f"Average Change: ${str(round(avg_change,2))} \n"),
+    str(f"Greatest Increase in Profits: {greatest_date} (${str(greatest_increase)}) \n"),
+    str(f"Greatest Decrease in Profits: {lowest_date} (${str(greatest_decrease)}) \n")
+]
+
+output.writelines(Lines)
+
+
+#line1 = "Financial Analysis \n"
+#line2 = "---------------------------- n\" ,
+#line3 = str(f"Total Months: {str(total_months)}")
+#line4 = str(f"Total: ${str(total_pl)}")
+#line5 = str(f"Average Change: ${str(round(avg_change,2))}")
+#line6 = str(f"Greatest Increase in Profits: {greatest_date} (${str(greatest_increase)})")
+#line7 = str(f"Greatest Decrease in Profits: {lowest_date} (${str(greatest_decrease)})")
