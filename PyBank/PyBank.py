@@ -2,12 +2,11 @@
 import os
 import csv
 
-#creating variables out of csv file
+#bring in csv file
 budget_data = os.path.join("budget_data.csv")
 
-#total number of months
+
 total_months = 0
-# net total profit/losses over entier period 
 total_pl = 0
 value = 0
 changes = 0
